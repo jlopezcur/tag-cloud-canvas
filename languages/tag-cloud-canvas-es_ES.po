@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tag Cloud Canvas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-21 16:01+0100\n"
+"PO-Revision-Date: 2012-04-21 16:03+0100\n"
+"Last-Translator: Javier <jlopezcur@gmail.com>\n"
+"Language-Team: Javier López Úbeda <info@noknokstdio.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Spanish\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../tag-cloud-canvas.php:43
+msgid "Tag cloud 3d using canvas (Sphere and Cylinder)"
+msgstr "Nube de etiquetas en 3D usando canvas (Esfera y cilindro)"
+
+#: ../tag-cloud-canvas.php:74
+msgid "Your browser doesn't support canvas."
+msgstr "Su navegador no soporta canvas."
+
+#: ../tag-cloud-canvas.php:132
+msgid "Tag Cloud"
+msgstr "Nube de etiquetas"
+
+#: ../tag-cloud-canvas.php:141
+msgid "Title:"
+msgstr "Título:"
+
+#: ../tag-cloud-canvas.php:147
+msgid "Taxonomies:"
+msgstr ""
+
+#: ../tag-cloud-canvas.php:149
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: ../tag-cloud-canvas.php:150
+#: ../tag-cloud-canvas.php:158
+msgid "Categories"
+msgstr "Categorías"
+
+#: ../tag-cloud-canvas.php:151
+#: ../tag-cloud-canvas.php:159
+msgid "Both"
+msgstr "Ambas"
+
+#: ../tag-cloud-canvas.php:155
+msgid "Shape:"
+msgstr "Esfera:"
+
+#: ../tag-cloud-canvas.php:157
+msgid "S"
+msgstr ""
+
+#: ../tag-cloud-canvas.php:164
+msgid "Width:"
+msgstr "Ancho:"
+
+#: ../tag-cloud-canvas.php:168
+msgid "Height:"
+msgstr "Altura:"
+
+#: ../tag-cloud-canvas.php:174
+msgid "Text Color:"
+msgstr "Color del texto:"
+
+#: ../tag-cloud-canvas.php:179
+msgid "Background Color:"
+msgstr "Color de fondo:"
+
+#: ../tag-cloud-canvas.php:186
+msgid "Background Transparent?"
+msgstr "¿Fondo transparente?"
+
+#, fuzzy
+#~ msgid "Allow skills diagrams"
+#~ msgstr "Permite integrar diagramas de habilidades"
+
+#~ msgid "Skills"
+#~ msgstr "Habilidades"
