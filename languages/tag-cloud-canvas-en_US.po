@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Cloud Canvas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-21 16:00+0100\n"
-"PO-Revision-Date: 2012-04-21 16:01+0100\n"
+"POT-Creation-Date: 2012-04-21 16:29+0100\n"
+"PO-Revision-Date: 2012-04-21 16:29+0100\n"
 "Last-Translator: Javier <jlopezcur@gmail.com>\n"
 "Language-Team: Javier López Úbeda <info@noknokstdio.com>\n"
 "Language: \n"
@@ -20,61 +20,67 @@ msgstr ""
 msgid "Tag cloud 3d using canvas (Sphere and Cylinder)"
 msgstr "Tag cloud 3d using canvas (Sphere and Cylinder)"
 
-#: ../tag-cloud-canvas.php:74
+#: ../tag-cloud-canvas.php:75
 msgid "Your browser doesn't support canvas."
 msgstr "Your browser doesn't support canvas."
 
-#: ../tag-cloud-canvas.php:132
+#: ../tag-cloud-canvas.php:135
 msgid "Tag Cloud"
 msgstr "Tag Cloud"
 
-#: ../tag-cloud-canvas.php:141
+#: ../tag-cloud-canvas.php:146
 msgid "Title:"
 msgstr "Title:"
 
-#: ../tag-cloud-canvas.php:147
+#: ../tag-cloud-canvas.php:152
 msgid "Taxonomies:"
 msgstr "Taxonomies:"
 
-#: ../tag-cloud-canvas.php:149
+#: ../tag-cloud-canvas.php:154
 msgid "Tags"
 msgstr "Tags"
 
-#: ../tag-cloud-canvas.php:150
-#: ../tag-cloud-canvas.php:158
+#: ../tag-cloud-canvas.php:155
 msgid "Categories"
 msgstr "Categories"
 
-#: ../tag-cloud-canvas.php:151
-#: ../tag-cloud-canvas.php:159
+#: ../tag-cloud-canvas.php:156
 msgid "Both"
 msgstr "Both"
 
-#: ../tag-cloud-canvas.php:155
+#: ../tag-cloud-canvas.php:160
 msgid "Shape:"
 msgstr "Shape:"
 
-#: ../tag-cloud-canvas.php:157
-msgid "S"
-msgstr ""
+#: ../tag-cloud-canvas.php:162
+msgid "Sphere"
+msgstr "Sphere"
+
+#: ../tag-cloud-canvas.php:163
+msgid "Horizontal Cylinder"
+msgstr "Horizontal Cylinder"
 
 #: ../tag-cloud-canvas.php:164
+msgid "Vertical Cylinder"
+msgstr "Vertical Cylinder"
+
+#: ../tag-cloud-canvas.php:169
 msgid "Width:"
 msgstr "Width:"
 
-#: ../tag-cloud-canvas.php:168
+#: ../tag-cloud-canvas.php:173
 msgid "Height:"
 msgstr "Height:"
 
-#: ../tag-cloud-canvas.php:174
+#: ../tag-cloud-canvas.php:179
 msgid "Text Color:"
 msgstr "Text Color:"
 
-#: ../tag-cloud-canvas.php:179
+#: ../tag-cloud-canvas.php:184
 msgid "Background Color:"
 msgstr "Background Color:"
 
-#: ../tag-cloud-canvas.php:186
+#: ../tag-cloud-canvas.php:191
 msgid "Background Transparent?"
 msgstr "Background Transparent?"
 
