@@ -20,8 +20,6 @@ You can see a demo on http://www.noknokstdio.com/
 2. Activate the plugin through the 'Plugins' menu in Wordpress
 3. Put the widget into one sidebar through the 'Widgets' menu in Wordpress
 
-Have fun!
-
 ### ChangeLog ###
 
 ## 0.1.0 ##
