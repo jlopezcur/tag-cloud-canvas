@@ -4,7 +4,10 @@ tag-cloud-canvas
 #### Tag cloud 3d using canvas (Sphere and Cylinder) ####
 
 This widget add a tag cloud 3d to your sidebar.
+
 Based on the jquery plugin tagcanvas.js from http://www.goat1000.com/.
+
+You can see a demo on http://www.noknokstdio.com/
 
 ### Screenshots ###
 
