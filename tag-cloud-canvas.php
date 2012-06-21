@@ -65,6 +65,7 @@ class Tag_Cloud_Canvas extends WP_Widget {
         $weight = apply_filters('widget_weight', $instance['weight']);
         $applyWeight = ($weight == 'none') ? 'false' : 'true';
         $text_color = apply_filters('widget_text_color', $instance['text_color']);
+        $high_color = apply_filters('widget_high_color', $instance['high_color']);
         $bg_color = apply_filters('widget_bg_color', $instance['bg_color']);
         $bg_transparent = apply_filters('widget_bg_transparent', $instance['bg_transparent']);
         
@@ -93,7 +94,8 @@ jQuery(function() {
      maxSpeed : 0.03,
      depth : 0.75,
      weight : <?php echo $applyWeight; ?>,
-     weightMode : '<?php echo $weight; ?>'
+     weightMode : '<?php echo $weight; ?>',
+     weightGradient : {0:'<?php echo $high_color; ?>', 1:'<?php echo $text_color; ?>'}
    }, 'tags')) {
      // TagCanvas failed to load
      jQuery('#tagCloudCanvas<?php echo $this->number ?>Container').hide();
@@ -124,6 +126,7 @@ jQuery(function() {
         $instance['height'] = $new_instance['height'];
         $instance['weight'] = $new_instance['weight'];
         $instance['text_color'] = $new_instance['text_color'];
+        $instance['high_color'] = $new_instance['high_color'];
         $instance['bg_color'] = $new_instance['bg_color'];
         $instance['bg_transparent'] = $new_instance['bg_transparent'];
         return $instance;
@@ -144,6 +147,7 @@ jQuery(function() {
         if (isset($instance['height'])) $height = $instance['height']; else $height = 300;
         if (isset($instance['weight'])) $weight = $instance['weight']; else $weight = 'none';
         if (isset($instance['text_color'])) $text_color = $instance['text_color']; else $text_color = '#333333';
+        if (isset($instance['high_color'])) $high_color = $instance['high_color']; else $high_color = '#ff0000';
         if (isset($instance['bg_color'])) $bg_color = $instance['bg_color']; else $bg_color = '#ffffff';
         if (isset($instance['bg_transparent'])) $bg_transparent = $instance['bg_transparent']; else $bg_transparent = '1';
         
@@ -188,13 +192,24 @@ jQuery(function() {
                     <div style="position: absolute;" id="colorpicker<?php echo $this->get_field_id('text_color'); ?>"></div>
                 </td>
                 <td>
-                    <label for="<?php echo $this->get_field_id('bg_color'); ?>"><?php _e('Background Color:', 'tag-cloud-canvas'); ?></label> 
-                    <input class="widefat" id="<?php echo $this->get_field_id('bg_color'); ?>" name="<?php echo $this->get_field_name('bg_color'); ?>" type="text" value="<?php echo $bg_color ?>" />
-                    <div style="position: absolute;" id="colorpicker<?php echo $this->get_field_id('bg_color'); ?>"></div>
+                    <label for="<?php echo $this->get_field_id('high_color'); ?>"><?php _e('Highlighted Text Color:', 'tag-cloud-canvas'); ?></label> 
+                    <input class="widefat" id="<?php echo $this->get_field_id('high_color'); ?>" name="<?php echo $this->get_field_name('high_color'); ?>" type="text" value="<?php echo $high_color ?>" />
+                    <div style="position: absolute;" id="colorpicker<?php echo $this->get_field_id('high_color'); ?>"></div>
                 </td>
             </tr>
             <tr>
                 <td>
+                    <label for="<?php echo $this->get_field_id('bg_color'); ?>"><?php _e('Background Color:', 'tag-cloud-canvas'); ?></label> 
+                    <input class="widefat" id="<?php echo $this->get_field_id('bg_color'); ?>" name="<?php echo $this->get_field_name('bg_color'); ?>" type="text" value="<?php echo $bg_color ?>" />
+                    <div style="position: absolute;" id="colorpicker<?php echo $this->get_field_id('bg_color'); ?>"></div>
+                </td>
+                <td>
+                    <label for="<?php echo $this->get_field_id('bg_transparent'); ?>"><?php _e('Background Transparent?', 'tag-cloud-canvas'); ?></label>
+                    <input class="checkbox" type="checkbox" value="1" <?php checked($bg_transparent, 1); ?> id="<?php echo $this->get_field_id('bg_transparent'); ?>" name="<?php echo $this->get_field_name('bg_transparent'); ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
                     <label for="<?php echo $this->get_field_id('weight'); ?>"><?php _e('Weight:', 'tag-cloud-canvas'); ?></label> 
                     <select id="<?php echo $this->get_field_id('weight'); ?>" name="<?php echo $this->get_field_name('weight'); ?>" class="widefat" style="width:100%;">
                         <option value="none" <?php if ('none' == $weight) echo 'selected="selected"'; ?>><?php _e('None', 'tag-cloud-canvas'); ?></option>
@@ -202,10 +217,6 @@ jQuery(function() {
                         <option value="colour" <?php if ('colour' == $weight) echo 'selected="selected"'; ?>><?php _e('Colour', 'tag-cloud-canvas'); ?></option>
                         <option value="both" <?php if ('both' == $weight) echo 'selected="selected"'; ?>><?php _e('Both', 'tag-cloud-canvas'); ?></option>
                     </select>
-                </td>
-                <td colspan="2">
-                    <label for="<?php echo $this->get_field_id('bg_transparent'); ?>"><?php _e('Background Transparent?', 'tag-cloud-canvas'); ?></label>
-                    <input class="checkbox" type="checkbox" value="1" <?php checked($bg_transparent, 1); ?> id="<?php echo $this->get_field_id('bg_transparent'); ?>" name="<?php echo $this->get_field_name('bg_transparent'); ?>" />
                 </td>
             </tr>
         </table>
@@ -220,6 +231,19 @@ jQuery(function() {
             });
             jQuery(document).mousedown(function() {
                 jQuery('#colorpicker<?php echo $this->get_field_id('text_color'); ?>').each(function() {
+                    if (jQuery(this).css('display') == 'block') jQuery(this).slideUp();
+                });
+            });
+            
+            jQuery('#colorpicker<?php echo $this->get_field_id('high_color'); ?>').hide();
+            jQuery('#colorpicker<?php echo $this->get_field_id('high_color'); ?>').farbtastic("#<?php echo $this->get_field_id('high_color'); ?>");
+            jQuery("#<?php echo $this->get_field_id('high_color'); ?>").click(function(){
+                jQuery('#colorpicker<?php echo $this->get_field_id('high_color'); ?>').each(function() {
+                    if (jQuery(this).css('display') != 'block') jQuery(this).slideDown();
+                });
+            });
+            jQuery(document).mousedown(function() {
+                jQuery('#colorpicker<?php echo $this->get_field_id('high_color'); ?>').each(function() {
                     if (jQuery(this).css('display') == 'block') jQuery(this).slideUp();
                 });
             });

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tag Cloud Canvas v0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-21 16:29+0100\n"
-"PO-Revision-Date: 2012-06-21 10:46:48+0000\n"
+"PO-Revision-Date: 2012-06-21 11:24:22+0000\n"
 "Last-Translator: Javier <jlopezcur@gmail.com>\n"
 "Language-Team: Javier López Úbeda <info@noknokstdio.com>\n"
 "MIME-Version: 1.0\n"
@@ -24,78 +24,78 @@ msgstr ""
 msgid "Tag cloud 3d using canvas (Sphere and Cylinder)"
 msgstr "Nube de etiquetas en 3D usando canvas (Esfera y cilindro)"
 
-#: tag-cloud-canvas.php:77
+#: tag-cloud-canvas.php:78
 #@ tag-cloud-canvas
 msgid "Your browser doesn't support canvas."
 msgstr "Su navegador no soporta canvas."
 
-#: tag-cloud-canvas.php:140
+#: tag-cloud-canvas.php:143
 #@ tag-cloud-canvas
 msgid "Tag Cloud"
 msgstr "Nube de etiquetas"
 
-#: tag-cloud-canvas.php:152
+#: tag-cloud-canvas.php:156
 #@ tag-cloud-canvas
 msgid "Title:"
 msgstr "Título:"
 
-#: tag-cloud-canvas.php:158
+#: tag-cloud-canvas.php:162
 #@ tag-cloud-canvas
 msgid "Taxonomies:"
 msgstr "Taxonomías:"
 
-#: tag-cloud-canvas.php:160
+#: tag-cloud-canvas.php:164
 #@ tag-cloud-canvas
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: tag-cloud-canvas.php:161
+#: tag-cloud-canvas.php:165
 #@ tag-cloud-canvas
 msgid "Categories"
 msgstr "Categorías"
 
-#: tag-cloud-canvas.php:162
-#: tag-cloud-canvas.php:203
+#: tag-cloud-canvas.php:166
+#: tag-cloud-canvas.php:218
 #@ tag-cloud-canvas
 msgid "Both"
 msgstr "Ambas"
 
-#: tag-cloud-canvas.php:166
+#: tag-cloud-canvas.php:170
 #@ tag-cloud-canvas
 msgid "Shape:"
 msgstr "Esfera:"
 
-#: tag-cloud-canvas.php:168
+#: tag-cloud-canvas.php:172
 #@ tag-cloud-canvas
 msgid "Sphere"
 msgstr "Esfera"
 
-#: tag-cloud-canvas.php:169
+#: tag-cloud-canvas.php:173
 #@ tag-cloud-canvas
 msgid "Horizontal Cylinder"
 msgstr "Cilindro Horizontal"
 
-#: tag-cloud-canvas.php:170
+#: tag-cloud-canvas.php:174
 #@ tag-cloud-canvas
 msgid "Vertical Cylinder"
 msgstr "Cilindro Vertical"
 
-#: tag-cloud-canvas.php:176
+#: tag-cloud-canvas.php:180
 #@ tag-cloud-canvas
 msgid "Width:"
 msgstr "Ancho:"
 
-#: tag-cloud-canvas.php:180
+#: tag-cloud-canvas.php:184
 #@ tag-cloud-canvas
 msgid "Height:"
 msgstr "Altura:"
 
-#: tag-cloud-canvas.php:186
+#: tag-cloud-canvas.php:190
 #@ tag-cloud-canvas
 msgid "Text Color:"
 msgstr "Color del texto:"
 
-#: tag-cloud-canvas.php:191
+#: tag-cloud-canvas.php:202
 #@ tag-cloud-canvas
 msgid "Background Color:"
 msgstr "Color de fondo:"
@@ -105,23 +105,28 @@ msgstr "Color de fondo:"
 msgid "Background Transparent?"
 msgstr "¿Fondo transparente?"
 
-#: tag-cloud-canvas.php:198
+#: tag-cloud-canvas.php:213
 #@ tag-cloud-canvas
 msgid "Weight:"
 msgstr "Peso:"
 
-#: tag-cloud-canvas.php:200
+#: tag-cloud-canvas.php:215
 #@ tag-cloud-canvas
 msgid "None"
 msgstr "Nada"
 
-#: tag-cloud-canvas.php:201
+#: tag-cloud-canvas.php:216
 #@ tag-cloud-canvas
 msgid "Size"
 msgstr "Tamaño"
 
-#: tag-cloud-canvas.php:202
+#: tag-cloud-canvas.php:217
 #@ tag-cloud-canvas
 msgid "Colour"
 msgstr "Color"
+
+#: tag-cloud-canvas.php:195
+#@ tag-cloud-canvas
+msgid "Highlighted Text Color:"
+msgstr "Color del texto importante:"
 
