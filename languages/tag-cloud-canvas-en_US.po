@@ -1,91 +1,127 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tag Cloud Canvas\n"
+"Project-Id-Version: Tag Cloud Canvas v0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-21 16:29+0100\n"
-"PO-Revision-Date: 2012-04-21 16:29+0100\n"
+"PO-Revision-Date: 2012-06-21 10:43:21+0000\n"
 "Last-Translator: Javier <jlopezcur@gmail.com>\n"
 "Language-Team: Javier López Úbeda <info@noknokstdio.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_n\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-Language: English\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: ..\n"
+"X-Textdomain-Support: yes"
 
-#: ../tag-cloud-canvas.php:43
+#: tag-cloud-canvas.php:43
+#@ tag-cloud-canvas
 msgid "Tag cloud 3d using canvas (Sphere and Cylinder)"
 msgstr "Tag cloud 3d using canvas (Sphere and Cylinder)"
 
-#: ../tag-cloud-canvas.php:75
+#: tag-cloud-canvas.php:77
+#@ tag-cloud-canvas
 msgid "Your browser doesn't support canvas."
 msgstr "Your browser doesn't support canvas."
 
-#: ../tag-cloud-canvas.php:135
+#: tag-cloud-canvas.php:140
+#@ tag-cloud-canvas
 msgid "Tag Cloud"
 msgstr "Tag Cloud"
 
-#: ../tag-cloud-canvas.php:146
+#: tag-cloud-canvas.php:152
+#@ tag-cloud-canvas
 msgid "Title:"
 msgstr "Title:"
 
-#: ../tag-cloud-canvas.php:152
+#: tag-cloud-canvas.php:158
+#@ tag-cloud-canvas
 msgid "Taxonomies:"
 msgstr "Taxonomies:"
 
-#: ../tag-cloud-canvas.php:154
+#: tag-cloud-canvas.php:160
+#@ tag-cloud-canvas
 msgid "Tags"
 msgstr "Tags"
 
-#: ../tag-cloud-canvas.php:155
+#: tag-cloud-canvas.php:161
+#@ tag-cloud-canvas
 msgid "Categories"
 msgstr "Categories"
 
-#: ../tag-cloud-canvas.php:156
+#: tag-cloud-canvas.php:162
+#: tag-cloud-canvas.php:203
+#@ tag-cloud-canvas
 msgid "Both"
 msgstr "Both"
 
-#: ../tag-cloud-canvas.php:160
+#: tag-cloud-canvas.php:166
+#@ tag-cloud-canvas
 msgid "Shape:"
 msgstr "Shape:"
 
-#: ../tag-cloud-canvas.php:162
+#: tag-cloud-canvas.php:168
+#@ tag-cloud-canvas
 msgid "Sphere"
 msgstr "Sphere"
 
-#: ../tag-cloud-canvas.php:163
+#: tag-cloud-canvas.php:169
+#@ tag-cloud-canvas
 msgid "Horizontal Cylinder"
 msgstr "Horizontal Cylinder"
 
-#: ../tag-cloud-canvas.php:164
+#: tag-cloud-canvas.php:170
+#@ tag-cloud-canvas
 msgid "Vertical Cylinder"
 msgstr "Vertical Cylinder"
 
-#: ../tag-cloud-canvas.php:169
+#: tag-cloud-canvas.php:176
+#@ tag-cloud-canvas
 msgid "Width:"
 msgstr "Width:"
 
-#: ../tag-cloud-canvas.php:173
+#: tag-cloud-canvas.php:180
+#@ tag-cloud-canvas
 msgid "Height:"
 msgstr "Height:"
 
-#: ../tag-cloud-canvas.php:179
+#: tag-cloud-canvas.php:186
+#@ tag-cloud-canvas
 msgid "Text Color:"
 msgstr "Text Color:"
 
-#: ../tag-cloud-canvas.php:184
+#: tag-cloud-canvas.php:191
+#@ tag-cloud-canvas
 msgid "Background Color:"
 msgstr "Background Color:"
 
-#: ../tag-cloud-canvas.php:191
+#: tag-cloud-canvas.php:207
+#@ tag-cloud-canvas
 msgid "Background Transparent?"
 msgstr "Background Transparent?"
 
-#~ msgid "Allow skills diagrams"
-#~ msgstr "Allow skills diagrams"
+#: tag-cloud-canvas.php:198
+#@ tag-cloud-canvas
+msgid "Weight:"
+msgstr "Weight:"
 
-#~ msgid "Skills"
-#~ msgstr "Skills"
+#: tag-cloud-canvas.php:200
+#@ tag-cloud-canvas
+msgid "None"
+msgstr "None"
+
+#: tag-cloud-canvas.php:201
+#@ tag-cloud-canvas
+msgid "Size"
+msgstr "Size"
+
+#: tag-cloud-canvas.php:202
+#@ tag-cloud-canvas
+msgid "Colour"
+msgstr "Both"
+

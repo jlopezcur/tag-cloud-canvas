@@ -62,6 +62,8 @@ class Tag_Cloud_Canvas extends WP_Widget {
         $shape = apply_filters('widget_shape', $instance['shape']);
         $width = apply_filters('widget_width', $instance['width']);
         $height = apply_filters('widget_height', $instance['height']);
+        $weight = apply_filters('widget_weight', $instance['weight']);
+        $applyWeight = ($weight == 'none') ? 'false' : 'true';
         $text_color = apply_filters('widget_text_color', $instance['text_color']);
         $bg_color = apply_filters('widget_bg_color', $instance['bg_color']);
         $bg_transparent = apply_filters('widget_bg_transparent', $instance['bg_transparent']);
@@ -89,7 +91,9 @@ jQuery(function() {
      shape : '<?php echo $shape ?>',
      outlineThickness : 1,
      maxSpeed : 0.03,
-     depth : 0.75
+     depth : 0.75,
+     weight : <?php echo $applyWeight; ?>,
+     weightMode : '<?php echo $weight; ?>'
    }, 'tags')) {
      // TagCanvas failed to load
      jQuery('#tagCloudCanvas<?php echo $this->number ?>Container').hide();
@@ -118,6 +122,7 @@ jQuery(function() {
         $instance['shape'] = $new_instance['shape'];
         $instance['width'] = $new_instance['width'];
         $instance['height'] = $new_instance['height'];
+        $instance['weight'] = $new_instance['weight'];
         $instance['text_color'] = $new_instance['text_color'];
         $instance['bg_color'] = $new_instance['bg_color'];
         $instance['bg_transparent'] = $new_instance['bg_transparent'];
@@ -137,6 +142,7 @@ jQuery(function() {
         if (isset($instance['shape'])) $shape = $instance['shape']; else $shape = 'sphere';
         if (isset($instance['width'])) $width = $instance['width']; else $width = 300;
         if (isset($instance['height'])) $height = $instance['height']; else $height = 300;
+        if (isset($instance['weight'])) $weight = $instance['weight']; else $weight = 'none';
         if (isset($instance['text_color'])) $text_color = $instance['text_color']; else $text_color = '#333333';
         if (isset($instance['bg_color'])) $bg_color = $instance['bg_color']; else $bg_color = '#ffffff';
         if (isset($instance['bg_transparent'])) $bg_transparent = $instance['bg_transparent']; else $bg_transparent = '1';
@@ -164,6 +170,7 @@ jQuery(function() {
                         <option value="vcylinder" <?php if ('vcylinder' == $shape) echo 'selected="selected"'; ?>><?php _e('Vertical Cylinder', 'tag-cloud-canvas'); ?></option>
                     </select>
                 </td>
+            </tr>
             <tr>
                 <td>
                     <label for="<?php echo $this->get_field_id('width'); ?>"><?php _e('Width:', 'tag-cloud-canvas'); ?></label> 
@@ -187,6 +194,15 @@ jQuery(function() {
                 </td>
             </tr>
             <tr>
+                <td>
+                    <label for="<?php echo $this->get_field_id('weight'); ?>"><?php _e('Weight:', 'tag-cloud-canvas'); ?></label> 
+                    <select id="<?php echo $this->get_field_id('weight'); ?>" name="<?php echo $this->get_field_name('weight'); ?>" class="widefat" style="width:100%;">
+                        <option value="none" <?php if ('none' == $weight) echo 'selected="selected"'; ?>><?php _e('None', 'tag-cloud-canvas'); ?></option>
+                        <option value="size" <?php if ('size' == $weight) echo 'selected="selected"'; ?>><?php _e('Size', 'tag-cloud-canvas'); ?></option>
+                        <option value="colour" <?php if ('colour' == $weight) echo 'selected="selected"'; ?>><?php _e('Colour', 'tag-cloud-canvas'); ?></option>
+                        <option value="both" <?php if ('both' == $weight) echo 'selected="selected"'; ?>><?php _e('Both', 'tag-cloud-canvas'); ?></option>
+                    </select>
+                </td>
                 <td colspan="2">
                     <label for="<?php echo $this->get_field_id('bg_transparent'); ?>"><?php _e('Background Transparent?', 'tag-cloud-canvas'); ?></label>
                     <input class="checkbox" type="checkbox" value="1" <?php checked($bg_transparent, 1); ?> id="<?php echo $this->get_field_id('bg_transparent'); ?>" name="<?php echo $this->get_field_name('bg_transparent'); ?>" />
